@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="day4.css" />
+    <title>시멘틱</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML 강의</h1>
+
+      <nav>
+        <ul>
+          <li><a href="day1.html">day1</a></li>
+          <li><a href="day2.html">day2</a></li>
+          <li><a href="day3.html">day3</a></li>
+          <li><a href="day4.html">day4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <aside>
+        <ul>
+          <li>
+            <a href="#semantic" class="str">html 시멘틱</a>
+            <ul>
+              <li><a href="#reason">- 시멘틱이 필요한 이유</a></li>
+              <li><a href="#whatisSem">- 그렇다면 시멘틱이란</a></li>
+              <li><a href="#meanofmean">- 의미적으로의 의미</a></li>
+              <li><a href="#semvsnon">- sementic vs non-sementic</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#element" class="str">시멘틱 요소</a>
+            <ul>
+              <li><a href="#tags">- 많이 사용하는 것들</a></li>
+              <li><a href="#addtag">- 추가로 알아두면 좋은 것</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <div class="container">
+        <article id="semantic">
+          <h2>1. HTML 시멘틱</h2>
+          <section id="reason">
+            <h3>시멘틱이 필요한 이유</h3>
+            <p>
+              다양한 이유가 있는데 대표적으로 SEO와 크롤링에서의 문제가 있음.
+              <br />
+              google이나 naver 같은 웹에서는 크롤링을 하는데 이때 html을 크롤링.
+              <br />
+              이를 위해 html을 시멘틱으로 잘 구조화할 필요가 있음. <br />
+              그리고 SEO에서 해당 페이지가 상단에 뜨려면 시멘틱이 필수 <br />
+              시멘틱으로 잘 구성된 걸 품질이 좋은 페이지라고 판단하기 때문.
+              <br />
+              그리고 스크린 리더로 화면을 읽을 때도 header, main, footer을
+              머릿말 본문 꼬릿말 같은 식으로 읽어줌 <br />
+              이로 인해 접근성이 향상된다는 장점. <br />
+              그리고 개발자들간의 원활한 소통에도 도움이 됨. 결국 유지보수에
+              도움 된다는 소리<br />
+            </p>
+          </section>
+          <section id="whatisSem">
+            <h3>그렇다면 시멘틱이란?</h3>
+            <p>
+              HTML 시멘틱(Semantic)이란, 웹 페이지의 구조를 의미적으로 명확하게
+              표현하는 것을 의미 <br />
+              즉, 각 요소가 어떤 의미를 가지는지 명확하게 나타내어 검색 엔진과
+              사용자 모두에게 페이지의 내용을 더 잘 이해하도록 돕는 것 <br />
+              위의 필요한 이유들을 위해 잘 구조화 시키는 것이 목적. <br />
+              시멘틱의 가장 중요한 것은 "의미적으로 명확하게" 라는 부분임.
+              <br />
+            </p>
+          </section>
+          <section id="meanofmean">
+            <h3>의미적으로의 의미</h3>
+            <p>
+              우리는 지난 시간에 div와 span에 대해 간단하게 설명하고 넘어갔음.
+              <br />
+              div와 span은 아무 의미가 없는 그냥 구조용 태그. <br />
+              종종 어떤 사이트들을 보면 div가 남발되어 구조를 제대로 확인하기
+              힘든 경우가 있음. <br />
+              div와 span과 달리 nav, section, article 등 의미론적인 태그들은 그
+              의미를 이름부터 확인 가능 <br />
+              form만 생각해봐도 form 태그가 이 안 요소들이 form의 내용을 담고
+              있다고 설명해줌. <br />
+            </p>
+            <p>
+              다만 시멘틱이라는 건 개발자별로, 그리고 프로젝트별로 구조가 조금씩
+              다름<br />
+              어쩌면 div를 남발하는 그 코드도 검색엔진은 싫어하겠지만 해당
+              프로젝트에서 정해진 구조일지도 모름 <br />
+            </p>
+          </section>
+          <section id="semvsnon">
+            <h3>Semantic vs non-Semantic</h3>
+            <figure>
+              <img
+                src="https://miro.medium.com/v2/resize:fit:766/1*Zdcpe1oOwoVUgC-oggCASw.jpeg"
+                alt="논시멘틱과 시멘틱의 차이"
+              />
+              <figcaption>non-semantic and semantic</figcaption>
+            </figure>
+            <p>
+              그냥 봐도 구조적으로 차이가 느껴짐. <br />
+              div만 사용된 죄측과 달리, 우측이 더 깔끔하고 구성 목적이 잘 보임.
+              <br />
+              그래도 기억해야할 점은 지금 가르치는 시멘틱이 모두 동일하게
+              구성되지는 않는다는 점. <br />
+              프로젝트 별로 그리고 개발자별로 시멘틱을 조금씩 다르게 구성함.
+              <br />
+              그러니 스스로의 시멘틱 규칙을 정해보는 것도 좋음. <br />
+              지금 이 코드에는 article이 밖에 그 안의 요소들을 section으로
+              묶었지만 <br />
+              어떤 페이지에서는 section안에 article을 넣을 수도 있는 것임.
+              <br />
+            </p>
+          </section>
+        </article>
+        <article id="element">
+          <h2>2. 시멘틱 요소</h2>
+          <section id="tags">
+            <h3>많이 사용되는 것들</h3>
+            <ul>
+              <li>&lt;header&gt;: 상단 영역, 보통 로고/메뉴</li>
+              <li>&lt;nav&gt;: 네비게이션 영역</li>
+              <li>&lt;main&gt;: 문서의 주요(메인) 콘텐츠</li>
+              <li>&lt;section&gt;: 구분가능한 콘텐츠 영역</li>
+              <li>&lt;article&gt;: 독립적으로 의미 있는 콘텐츠</li>
+              <li>&lt;aside&gt;: 부가 콘텐츠</li>
+              <li>&lt;footer&gt;: 하단 영역, 보통 저작권 표기 등</li>
+            </ul>
+            <p>이 페이지 자체가 위 요소들의 하나의 예시임.</p>
+          </section>
+          <section id="addtag">
+            <h3>추가로 알아두면 좋은 것</h3>
+            <ul>
+              <li>&lt;figure&gt;: 독립적인 미디어 콘텐츠 영역</li>
+              <li>
+                &lt;details&gt;: 열고 닫을 수 있는 콘텐츠 영역 (토글 기능)
+              </li>
+            </ul>
+            <article>
+              <h4>- figure 예제</h4>
+              <p>위의 sementic vs non-sementic에 사용되어 있음.</p>
+            </article>
+            <article>
+              <h4>- details 예제</h4>
+              <pre>
+                <code>
+                    &lt;h2&gt;자주 묻는 질문&lt;/h2&gt;
+
+                    &lt;details&gt;
+                      &lt;summary&gt;Q. 배송은 얼마나 걸리나요?&lt;/summary&gt;
+                      &lt;p&gt;배송은 평균 2~3일 소요됩니다. 도서산간 지역은 추가 배송일이 발생할 수 있습니다.&lt;/p&gt;
+                    &lt;/details&gt;
+
+                    &lt;details&gt;
+                      &lt;summary&gt;Q. 환불은 어떻게 하나요?&lt;/summary&gt;
+                      &lt;p&gt;제품 수령 후 7일 이내에 고객센터로 신청하시면 환불이 가능합니다.&lt;/p&gt;
+                    &lt;/details&gt;
+                </code>
+            </pre>
+            </article>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Park Jiyeong. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

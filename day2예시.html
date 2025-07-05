@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>테이블 종합 실습</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 400px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      thead {
+        background-color: lightgray;
+      }
+      tfoot {
+        background-color: lightyellow;
+      }
+      colgroup col:nth-child(2) {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>학생 성적표</h2>
+
+    <table border="1">
+      <caption>
+        2024년 1학기 종합 성적표
+      </caption>
+
+      <colgroup>
+        <col style="width: 100px" />
+        <col />
+        <col />
+      </colgroup>
+
+      <thead>
+        <tr class="tablerow">
+          <th scope="col">이름</th>
+          <th scope="col">국어</th>
+          <th scope="col">영어</th>
+        </tr>
+        table row
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">홍길동</th>
+          <td>90</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <th scope="row">김철수</th>
+          <td>95</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <th scope="row" rowspan="2">이영희</th>
+          <td colspan="2">결석</td>
+        </tr>
+        <tr>
+          <td>80</td>
+          <td>75</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>총 학생 수</td>
+          <td colspan="2">3명</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

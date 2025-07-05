@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="day2.css" /> -->
+    <title>list와 table</title>
+  </head>
+  <body>
+    <h1>list와 table</h1>
+    <section>
+      <h2>List</h2>
+
+      <div class="top-line"></div>
+      <h3>1. ul</h3>
+      <p>
+        ul은 순서가 없는 리스트. <br />
+        항목에 순서 없이 표시됨. <br />
+        보통 메뉴, 관심사 목록 이런 거에 많이 씀.
+      </p>
+      <h4>좋아하는 음식</h4>
+      <ul>
+        <li>피자</li>
+        <li>치킨</li>
+        <li>초밥</li>
+      </ul>
+
+      <div class="top-line"></div>
+      <h3>2. ol</h3>
+      <p>
+        ol은 순서가 있는 리스트. <br />
+        항목에 순서가 표시됨. <br />
+        보통 순서가 있는 절차, 레시피 이런 거에 씀.
+      </p>
+      <h4>라면 끓이는 법</h4>
+      <ol>
+        <li>물 끓이기</li>
+        <li>스프와 면 넣기</li>
+        <li>익으면 맛있게 먹기</li>
+      </ol>
+
+      <div class="top-line"></div>
+      <h3>3. dl</h3>
+      <p>
+        dl은 정의리스트로 불림.<br />
+        용어와 설명으로 짝지어서 정리.<br />
+        사전같은 형태.
+      </p>
+      <h4>프론트 엔드 용어</h4>
+      <dl>
+        <dt>HTML</dt>
+        <dd>웹 페이지의 뼈대를 만드는 언어</dd>
+        <dt>CSS</dt>
+        <dd>웹 페이지의 디자인을 꾸미는 언어</dd>
+      </dl>
+
+      <div class="top-line"></div>
+      <h3>4. 중첩 리스트</h3>
+      <p>리스트 안에 리스트를 중첩해서 넣을 수 있음.</p>
+      <h4>웹 개발</h4>
+      <ul>
+        <li>
+          <strong>프론트</strong>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+          </ul>
+        </li>
+        <li>
+          <strong>백엔드</strong>
+          <ul>
+            <li>Java</li>
+            <li>Node.JS</li>
+            <li>Python</li>
+          </ul>
+        </li>
+        <li>
+          <strong>개발과정</strong>
+          <ol>
+            <li>사이트 목적 정하기</li>
+            <li>사이트 디자인 방향성 정하기</li>
+            <li>사이트 개발</li>
+            <li>사이트 유지 보수 및 수정</li>
+          </ol>
+        </li>
+      </ul>
+      <div class="top-line"></div>
+    </section>
+    <div class="de-line"></div>
+    <section>
+      <h2>Table</h2>
+      <div class="top-line"></div>
+      <h3>기본 구조</h3>
+      <ul>
+        <li>&lt;table&gt; 전체 표</li>
+        <li>&lt;tr&gt; 행 묶음</li>
+        <li>&lt;th&gt; 제목 셀</li>
+        <li>&lt;td&gt; 일반 셀</li>
+      </ul>
+      <h4>등장인물</h4>
+      <table border="1">
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+        </tr>
+        <tr>
+          <td>홍길동</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>심청이</td>
+          <td>18</td>
+        </tr>
+      </table>
+
+      <div class="top-line"></div>
+      <h3>행 그룹</h3>
+      <p>html은 언제나 구조를 중시하기 때문에 행들을 그룹화할 필요가 있음.</p>
+      <ul>
+        <li>&lt;thead&gt;</li>
+        <li>&lt;tbody&gt;</li>
+        <li>&lt;tfoot&gt;</li>
+      </ul>
+      <table border="1">
+        <caption>
+          성적표
+        </caption>
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>점수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>홍길동</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>영희</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <td>철수</td>
+            <td>70</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>평균</td>
+            <td>80</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="top-line"></div>
+      <h3>열과 행 병합</h3>
+      <ul>
+        <li>colspan 열 병합</li>
+        <li>rowspan 행 병합</li>
+      </ul>
+      <table border="1">
+        <caption>
+          colspan
+        </caption>
+        <tr>
+          <th colspan="2">회원 정보</th>
+        </tr>
+        <tr>
+          <th>이름</th>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <th>아이디</th>
+          <td>1003231</td>
+        </tr>
+      </table>
+      <table border="1">
+        <caption>
+          rowspan
+        </caption>
+        <tr>
+          <th rowspan="2">이름</th>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <td>김철수</td>
+        </tr>
+      </table>
+      <p>추가로 알면 좋은 것 colgroup + col, scope</p>
+      <div class="top-line"></div>
+    </section>
+  </body>
+</html>

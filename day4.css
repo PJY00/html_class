@@ -46,6 +46,31 @@ article {
     background: #f0efeb;
 }
 
+section > article{
+    padding: 0;
+}
+
+article>p,
+article>h4,
+pre,
+code{
+    padding: 0.3rem;
+    margin: 0;
+}
+
+article>h4:nth-child(2){
+    margin-top: 2rem;
+}
+
+pre {
+    margin: 0.3rem;
+    padding: 0;
+    line-height: 1;
+    font-size: 0.8rem;
+    display: block;
+    white-space: pre;
+}
+
 aside {
     position: sticky;
     top: 20px;
